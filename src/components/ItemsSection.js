@@ -3,11 +3,11 @@ import React from 'react';
 const ItemsSection = () => {
     const items = [
         { id: 1, text: 'Innovative Solutions', gradient: 'bg-gradient-to-r from-gray-700 to-gray-900' },
-        { id: 2, text: 'Global Network', gradient: 'bg-gradient-to-r from-gray-600 to-gray-400' },
-        { id: 3, text: 'Secure Transactions', gradient: 'bg-gradient-to-r from-zinc-500 to-gray-800' },
-        { id: 4, text: 'Real-time Analytics', gradient: 'bg-gradient-to-r from-neutral-400 to-gray-900' },
-        { id: 5, text: 'User-friendly Platforms', gradient: 'bg-gradient-to-r from-gray-800 to-gray-900' },
-        { id: 6, text: 'Scalable Infrastructure', gradient: 'bg-gradient-to-r from-gray-600 to-gray-800' },
+        { id: 2, text: 'Design', gradient: 'bg-gradient-to-r from-gray-600 to-gray-400' },
+        { id: 3, text: 'Marketing', gradient: 'bg-gradient-to-r from-zinc-500 to-gray-800' },
+        { id: 4, text: 'Programming and Web Development', gradient: 'bg-gradient-to-r from-neutral-400 to-gray-900' },
+        { id: 5, text: 'Film Production', gradient: 'bg-gradient-to-r from-gray-800 to-gray-900' },
+        { id: 6, text: 'Branding', gradient: 'bg-gradient-to-r from-gray-600 to-gray-800' },
     ];
 
     // Function to determine the TailwindCSS width and height class based on the item's index
