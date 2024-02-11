@@ -1,6 +1,5 @@
-// CompanyMembers.jsx
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation, Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,50 +7,56 @@ import 'swiper/css/pagination';
 
 const CompanyMembers = () => {
     const members = [
-        // Add members here with image URLs
         {
             name: 'John Doe',
             role: 'CEO',
             description: 'Visionary leader and entrepreneur with a passion for innovation.',
-            imageUrl: '/images/Members/CEO.jpg' // Add the correct path
+            imageUrl: '/images/Members/CEO.jpg'
         },
         {
             name: 'Andrew Hill',
             role: 'Programmer',
             description: 'Innovative solution specialist.',
-            imageUrl: '/images/Members/Programmer1.jpg' // Add the correct path
+            imageUrl: '/images/Members/Programmer1.jpg'
         },
         {
             name: 'Brad Oak',
             role: 'Designer',
             description: 'Modern Designer with a passion for aesthetics.',
-            imageUrl: '/images/Members/Designer1.jpg' // Add the correct path
+            imageUrl: '/images/Members/Designer1.jpg'
         },
         {
             name: 'Hugh Dorothy',
             role: 'Designer',
             description: 'Open minded and Forward Coming Designer.',
-            imageUrl: '/images/Members/Designer2.jpg' // Add the correct path
+            imageUrl: '/images/Members/Designer2.jpg'
         },
     ];
 
     return (
-        <section className="py-12 bg-black text-white">
-            <div className="container mx-auto px-8">
-                <h2 className="text-3xl font-bold mb-6">Meet the Team</h2>
+        <section className="bg-black text-white py-48">
+            <div className="container mx-auto">
+                <h2 className="text-5xl font-bold mb-20 text-center">Meet the Team</h2>
                 <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={30}
+                    speed={600}
                     slidesPerView={1}
                     navigation
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    className="swiper-full"
                 >
                     {members.map((member, index) => (
                         <SwiperSlide key={index}>
-                            <div className="text-center">
-                                <img src={member.imageUrl} alt={member.name} className="mx-auto w-40 h-40 object-cover rounded-full shadow-lg mb-4"/>
-                                <p className="text-xl font-bold">{member.name}</p>
-                                <p className="text-md">{member.role}</p>
-                                <p className="text-md">{member.description}</p>
+                            <div className="text-center h-[70vh] flex flex-row items-center justify-center gap-20">
+                                <img src={member.imageUrl} alt={member.name}
+                                     className="w-96 h-96 object-cover rounded-full shadow-2xl mb-4"/>
+                                <div>
+                                    <p className="text-2xl font-bold text-black">{member.name}</p>
+                                    <p className="text-lg text-black">{member.role}</p>
+                                    <p className="text-lg text-black">{member.description}</p>
+                                </div>
                             </div>
                         </SwiperSlide>
                     ))}
@@ -62,5 +67,4 @@ const CompanyMembers = () => {
 };
 
 export default CompanyMembers;
-
 

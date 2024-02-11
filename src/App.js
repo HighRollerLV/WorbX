@@ -6,6 +6,7 @@ import ItemsSection from "./components/ItemsSection";
 import OffersSection from "./components/OffersSection";
 import CompanyMembers from "./components/CompanyMembers";
 import Footer from "./components/Footer";
+import './index.css';
 
 const App = () => {
   return (
