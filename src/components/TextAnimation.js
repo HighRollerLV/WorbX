@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 const TextAnimation = () => {
-    const words = [
+    const words = useMemo(() => [
         'Innovative Design and Solutions.',
-    ];
+    ], []); // Dependency array is empty, so this runs once
+
     const [part, setPart] = useState('');
     const [i, setI] = useState(0);
     const [offset, setOffset] = useState(0);
@@ -17,7 +18,7 @@ const TextAnimation = () => {
             if (forwards) {
                 if (offset >= words[i].length) {
                     setSkipCount((prevSkipCount) => prevSkipCount + 1);
-                    if (skipCount === skipDelay) {
+                    if (skipCount >= skipDelay) {
                         setForwards(false);
                         setSkipCount(0);
                     }
