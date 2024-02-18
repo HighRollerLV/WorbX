@@ -2,12 +2,12 @@ import React from 'react';
 
 const ItemsSection = () => {
     const items = [
-        { id: 1, text: 'Innovative Solutions', gradient: 'bg-gradient-to-r from-gray-700 to-gray-900' },
-        { id: 2, text: 'Design', gradient: 'bg-gradient-to-r from-gray-600 to-gray-400' },
-        { id: 3, text: 'Marketing', gradient: 'bg-gradient-to-r from-zinc-500 to-gray-800' },
-        { id: 4, text: 'Programming and Web Development', gradient: 'bg-gradient-to-r from-neutral-400 to-gray-900' },
-        { id: 5, text: 'Film Production', gradient: 'bg-gradient-to-r from-gray-800 to-gray-900' },
-        { id: 6, text: 'Branding', gradient: 'bg-gradient-to-r from-gray-600 to-gray-800' },
+        { id: 1, text: 'Innovative Solutions', gradient: 'bg-gradient-to-r from-green-600 to-british' },
+        { id: 2, text: 'Design', gradient: 'bg-gradient-to-r from-british to-green-600' },
+        { id: 3, text: 'Marketing', gradient: 'bg-gradient-to-r from-green-800 to-british' },
+        { id: 4, text: 'Programming and Web Development', gradient: 'bg-gradient-to-r from-green-400 to-green-600' },
+        { id: 5, text: 'Film Production', gradient: 'bg-gradient-to-r from-green-500 to-green-600' },
+        { id: 6, text: 'Branding', gradient: 'bg-gradient-to-r from-green-400 to-green-500' },
     ];
 
     // Function to determine the TailwindCSS width and height class based on the item's index
@@ -37,7 +37,7 @@ const ItemsSection = () => {
     };
 
     return (
-        <section className="flex justify-center items-center w-full py-12 bg-gray-100">
+        <section className="flex justify-center items-center w-full py-12 bg-gray-50">
             <div className="w-3/4 mx-auto">
                 <div className="flex flex-wrap -mx-2 gap-5">
                     {items.map((item, index) => (

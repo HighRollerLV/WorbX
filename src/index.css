@@ -16,9 +16,9 @@ code {
 }
 .swiper-full {
   width: 100%;
-  background: white;
-  --swiper-navigation-color: black;
-  --swiper-pagination-color: black;
+  background: #032515;
+  --swiper-navigation-color: white;
+  --swiper-pagination-color: white;
 }
 
 .container {

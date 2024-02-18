@@ -34,9 +34,9 @@ const CompanyMembers = () => {
     ];
 
     return (
-        <section className="bg-black text-white py-48">
+        <section className="bg-white text-white py-48">
             <div className="container mx-auto">
-                <h2 className="text-5xl font-bold mb-20 text-center">Meet the Team</h2>
+                <h2 className="text-5xl text-black font-bold mb-20 text-center">Meet the Team</h2>
                 <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={30}
@@ -53,9 +53,9 @@ const CompanyMembers = () => {
                                 <img src={member.imageUrl} alt={member.name}
                                      className="w-96 h-96 object-cover rounded-full shadow-2xl mb-4"/>
                                 <div>
-                                    <p className="text-2xl font-bold text-black">{member.name}</p>
-                                    <p className="text-lg text-black">{member.role}</p>
-                                    <p className="text-lg text-black">{member.description}</p>
+                                    <p className="text-2xl font-bold text-white">{member.name}</p>
+                                    <p className="text-lg text-white">{member.role}</p>
+                                    <p className="text-lg text-white">{member.description}</p>
                                 </div>
                             </div>
                         </SwiperSlide>
