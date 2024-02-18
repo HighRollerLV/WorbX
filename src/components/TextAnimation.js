@@ -10,7 +10,7 @@ const TextAnimation = () => {
     const [forwards, setForwards] = useState(true);
     const [skipCount, setSkipCount] = useState(0);
     const skipDelay = 15;
-    const speed = 70;
+    const speed = 100;
 
     useEffect(() => {
         const wordFlick = setInterval(() => {

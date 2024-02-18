@@ -7,6 +7,7 @@ const Header = ({heroSectionRef, itemsSectionRef, offersSectionRef, companyMembe
     const [isNavVisible, setIsNavVisible] = useState(false); // State to toggle mobile navigation visibility
     const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
     const [visible, setVisible] = useState(true); // State to show/hide the header on scroll
+    const [contactFormAnimation, setContactFormAnimation] = useState('');
 
     // Effect to handle scroll event for showing/hiding header
     useEffect(() => {
@@ -32,6 +33,19 @@ const Header = ({heroSectionRef, itemsSectionRef, offersSectionRef, companyMembe
             behavior: 'smooth',
         });
         setIsNavVisible(false); // Close the mobile menu upon clicking a link
+    };
+
+    const toggleContactForm = () => {
+        if (!showContactForm) {
+            setShowContactForm(true);
+            setContactFormAnimation('contact-form-enter');
+        } else {
+            setContactFormAnimation('contact-form-exit');
+            // Use timeout to match animation duration
+            setTimeout(() => {
+                setShowContactForm(false);
+            }, 500); // This duration should match your CSS animation duration
+        }
     };
 
     return (
@@ -101,20 +115,18 @@ const Header = ({heroSectionRef, itemsSectionRef, offersSectionRef, companyMembe
                         </li>
                     </ul>
                 </nav>
-                <button
-                    className="bg-white text-british px-4 py-2 rounded hover:bg-gray-200 hidden md:block"
-                    onClick={() => setShowContactForm(!showContactForm)}>
+                <button className="bg-white text-british px-4 py-2 rounded hover:bg-gray-200 hidden md:block" onClick={toggleContactForm}>
                     Contact Us
                 </button>
             </header>
             {/* Contact Us Form */}
             {showContactForm && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                <div className={`fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 ${contactFormAnimation}`}>
                     <div className="bg-british p-8 rounded-lg shadow-lg space-y-4 relative">
                         <button
                             className="absolute top-0 right-0 mt-4 mr-4 text-white hover:text-gray-500 text-2xl"
-                            onClick={() => setShowContactForm(false)}>
-                            <IoMdClose/>
+                            onClick={toggleContactForm}>
+                            <IoMdClose />
                         </button>
                         <h2 className="text-xl font-bold text-white">Contact Us</h2>
                         <form>

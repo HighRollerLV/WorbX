@@ -12,9 +12,6 @@ const HeroSection = () => {
                 <div className="text-center">
                     <TextAnimation />
                     <p className="text-sm md:text-lg lg:text-xl mb-8">We will create the best design and bring the greatest solutions for your problems.</p>
-                    <button className="border-2 border-transparent bg-british hover:bg-transparent text-white font-bold py-2 px-4 rounded transition duration-500 ease-in-out hover:border-british">
-                        Get started — it's free
-                    </button>
                 </div>
             </div>
         </div>
