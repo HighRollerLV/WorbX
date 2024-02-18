@@ -21,11 +21,11 @@ const ItemsSection = () => {
                 heightClass = 'h-[50vh]';
                 break;
             case 1: // Every second item in the pattern
-                widthClass = 'w-[38.61%]';
+                widthClass = 'w-full lg:w-[48.85%] xl:w-[49.75%]';
                 heightClass = 'h-[100vh]';
                 break;
             case 2: // Every third item in the pattern
-                widthClass = 'w-3/5';
+                widthClass = 'w-full lg:w-[48.85%] xl:w-[49.75%]]';
                 heightClass = 'h-[100vh]';
                 break;
             default:

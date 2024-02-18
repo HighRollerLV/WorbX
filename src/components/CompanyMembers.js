@@ -49,9 +49,9 @@ const CompanyMembers = () => {
                 >
                     {members.map((member, index) => (
                         <SwiperSlide key={index}>
-                            <div className="text-center h-[70vh] flex flex-row items-center justify-center gap-20">
+                            <div className="text-center h-[70vh] flex flex-col lg:flex-row items-center justify-center gap-20">
                                 <img src={member.imageUrl} alt={member.name}
-                                     className="w-96 h-96 object-cover rounded-full shadow-2xl mb-4"/>
+                                     className="w-56 h-56 md:w-64 md:h-64 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl mb-4"/>
                                 <div>
                                     <p className="text-2xl font-bold text-white">{member.name}</p>
                                     <p className="text-lg text-white">{member.role}</p>
